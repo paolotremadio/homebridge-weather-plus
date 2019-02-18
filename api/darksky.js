@@ -91,6 +91,7 @@ class DarkSkyAPI {
             that.debug("Updating weather with dark sky");
             that.darksky.get()
                 .then(function (response) {
+                    that.log(JSON.stringify(response));
 
                     // Current weather report
                     response.currently.rainDay = that.cache.report.rainDay; // Load rainDay from cache
